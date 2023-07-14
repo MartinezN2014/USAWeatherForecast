@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Nelson's Weather Forecast</title>
+</head>
+<body>
+  
+  <nav class="bg-dark">
+    <h2 class="text-center">Weather Dashboard</h2>
+  </nav>
+
+  <div class="main-container container-fluid">
+    <div class="row">
+
+      <div id="search-section" class="col-md-4">
+        <div class="card-body">
+          <h4>Search for a city</h4>
+          <form class="form-inline">
+            <input type="search" placeholder="Enter City Name" class="form-control mr-sm-2 input" />
+            <button class="btn btn-primary my-2 my-sm-0 search search-button" type="submit">
+              <img src="./assets/images/search.png">
+            </button>
+          </form>
+
+          <div class="city-list"></div>
+        </div>
+      </div>
+
+      <div class="col-md-8 container-left-columns">
+        <!--Current city-->
+        <div class="row">
+            <div class="card card-city">
+                <div class="card-body">
+                    <p class="current-date"></p>
+                    <p class="city"></p>
+                    <img src="" class="weather-icon"></img>
+                    <p class="temperature"></p>
+                    <p class="humidity"></p>
+                    <p class="wind"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-blue">
+          <div class="row">
+              <div class="forecast-title">
+                  <div class="cbforecast">
+                      <h5>5-Day Forecast:</h5>
+                  </div>
+              </div>
+          </div>
+
+          <!--5 Day Forecast Days-->
+          <div class="row gutters">
+              <!--Day 1-->
+                  <div class="col">
+                      <div class="card forecast-day">
+                          <div class="card-body bg-primary">
+                              <p class="day-one-date"></p>
+                              <img class="day-one-icon"></img>
+                              <p class="day-one-temperature"></p>
+                              <p class="day-one-humidity"></p>
+                          </div>
+              
+                      </div>
+
+                  </div>
+              <!--Day 2-->
+                  <div class="col">
+                      <div class="card forecast">
+                          <div class="card-body bg-primary">
+                              <p class="day-two-date"></p>
+                              <img class="day-two-icon"></img>
+                              <p class="day-two-temperature"></p>
+                              <p class="day-two-humidity"></p>
+                          </div>
+                      </div>
+                  </div>
+
+              <!-- Day 3-->
+                  <div class="col">
+                      <div class="card forecast">
+                          <div class="card-body bg-primary">
+                              <p class="day-three-date"></p>
+                              <img class="day-three-icon"></img>
+                              <p class="day-three-temperature"></p>
+                              <p class="day-three-humidity"></p>
+                          </div>
+                      </div>
+                  </div>
+
+              <!--Day 4-->
+                  <div class="col">
+                      <div class="card forecast">
+                          <div class="card-body bg-primary">
+                              <p class="day-four-date"></p>
+                              <img class="day-four-icon"></img>
+                              <p class="day-four-temperature"></p>
+                              <p class="day-four-humidity"></p>
+                          </div>
+                      </div>
+                  </div>
+                  
+              <!--Day 5-->
+                  <div class="col">
+                      <div class="card forecast">
+                          <div class="card-body bg-primary">
+                              <p class="day-five-date"></p>
+                              <img class="day-five-icon"></img>
+                              <p class="day-five-temperature"></p>
+                              <p class="day-five-humidity"></p>
+                          </div>
+                      </div>
+                  </div>
+
+    </div>
+  </div>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
