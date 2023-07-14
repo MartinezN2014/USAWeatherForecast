@@ -19,3 +19,13 @@ Built With
 
 I learned how to call an API and how to use the data given to you through the API. I also learn more about URL and how to manually change the URL in order to change the information received through the API.
 Also got more comfortable with using bootstrap.
+
+[Github](./assets/images/GithubRepo.jpg)
+
+[WeatherDashboard](./assets/images/weatherdashboard.jpg)
+
+https://openweathermap.org/
+
+https://github.com/MartinezN2014/USAWeatherForeca
+
+https://martinezn2014.github.io/USAWeatherForecast
