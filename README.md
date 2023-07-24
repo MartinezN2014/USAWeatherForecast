@@ -20,9 +20,9 @@ Built With
 I learned how to call an API and how to use the data given to you through the API. I also learn more about URL and how to manually change the URL in order to change the information received through the API.
 Also got more comfortable with using bootstrap.
 
-[Github](./assets/images/GithubRepo.jpg)
+![Github](./assets/images/GithubRepo.jpg)
 
-[WeatherDashboard](./assets/images/weatherdashboard.jpg)
+![WeatherDashboard](./assets/images/weatherdashboard.jpg)
 
 https://openweathermap.org/
 
