@@ -8,7 +8,9 @@ const apiForecast =
 const searchBox = document.querySelector("input");
 const searchBtn = document.querySelector(".search-button");
 const weatherIcon = document.querySelector(".weather-icon");
-const today = new Date();
+const today = new Date().toDateString();
+
+localStorage.clear();
 
 function currentWeather(city) {
   event.preventDefault();
@@ -29,7 +31,7 @@ function currentWeather(city) {
         Math.round(data.main.temp) + "°F";
       document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
       document.querySelector(".wind").innerHTML = data.wind.speed + " mph";
-      document.querySelector(".current-date") === today;
+      document.querySelector(".current-date").textContent = today;
 
       if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "./assets/images/clouds.png";
@@ -163,14 +165,20 @@ function currentWeather(city) {
           //attempt to add localstorage to a list
           let searchList = searchBox.value;
 
-          let searchListJsn = JSON.stringify(searchList);
+          let searchListArr = JSON.parse(localStorage.getItem("history")) || [];
 
-          localStorage.setItem("locations", searchListJsn);
+          if (!searchListArr.includes(searchList)) {
+            searchListArr.push(searchList);
+          }
 
-          for (var i = 0; i < localStorage.length; i++) {
-            document
-              .querySelector(".city-list")
-              .append(localStorage.getItem(localStorage.key(i)));
+          localStorage.setItem("history", JSON.stringify(searchListArr));
+          document.querySelector(".city-list").innerHTML = "";
+          for (var i = 0; i < searchListArr.length; i++) {
+            var btn = document.createElement("button");
+            btn.setAttribute("class", "history-btn");
+            btn.textContent = searchListArr[i];
+            btn.onclick = historySearch;
+            document.querySelector(".city-list").appendChild(btn);
           }
         });
     });
@@ -180,3 +188,8 @@ function currentWeather(city) {
 searchBtn.addEventListener("click", () => {
   currentWeather(searchBox.value);
 });
+
+function historySearch(event) {
+  const city = event.target.textContent;
+  currentWeather(city);
+}
